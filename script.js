@@ -1,3 +1,4 @@
+//topnav onscroll color script
 document.addEventListener("DOMContentLoaded", () => {
 
     const nav = document.querySelector(".topnav");
@@ -6,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else nav.classList.remove("scrolled");
     });
 
+//form script
     const form = document.querySelector(".contact-form");
     if (form) {
         form.addEventListener("submit", async (e) => {
@@ -28,22 +30,29 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-    document.getElementById("cpymail").addEventListener("click", async () => {
-        const mail = "tobiasger@seznam.cz";
-        const status = document.getElementById("cpystat");
 
-        if (!status) return;
+    //copy mail to clipboard
+    const email = "example@mail.com"; // ← sem vlož svůj e-mail
 
+    const copyBtn = document.getElementById("cpymail");
+    const statusDiv = document.getElementById("cpystat");
+
+    copyBtn.addEventListener("click", async () => {
         try {
-            await navigator.clipboard.writeText(mail);
-            status.textContent = "E-mail byl zkopírován do schránky!";
+            await navigator.clipboard.writeText(email);
+
+            statusDiv.textContent = "E-mail zkopírován do schránky.";
+            statusDiv.style.opacity = "1";
+
+            setTimeout(() => {
+                statusDiv.textContent = "\n";
+            }, 3000);
+
         } catch (err) {
-            status.textContent = "Chyba kopírování.";
+            statusDiv.textContent = "Chyba: nepodařilo se zkopírovat.";
+            setTimeout(() => {
+                statusDiv.textContent = "\n";
+            }, 3000);
         }
-
-        setTimeout(() => {
-            status.textContent = "";
-        }, 3000);
     });
-
 });
