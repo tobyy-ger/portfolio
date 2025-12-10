@@ -43,7 +43,10 @@ body {
     color: #f1f7ee;
     text-align: center;
 }
-
+.cpymail_div{
+    transition: 300ms;
+    text-align: center;
+}
 .link{
     color: #f1f7ee;
     text-decoration: underline;
@@ -59,7 +62,7 @@ body {
 
 .imglinks {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
