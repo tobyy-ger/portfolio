@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>O projektu</title>
+    <link rel="stylesheet" href="conv_style.css" />
+</head>
+<body>
+
+<div class="menu">
+    <a class="txt">Tobias Gerlich</a>
+    <nav>
+        <a class="menuOpt" href="conv_intro.html">Úvod</a>
+        <a class="menuOpt" href="convertor.html">Konvertor</a>
+        <a class="menuOpt" href="conv_about.html">O projektu</a>
+    </nav>
+</div>
+
+<div class="desc">
+    <h1>O projektu</h1>
+    <p align="center">
+        <br>Tento projekt vznikl jako závěrečná práce do školního předmětu zaměřeného na tvorbu webových aplikací. Hlavním cílem bylo vytvořit funkční a přehledný <strong>konvertor měn</strong> pomocí čistého HTML, CSS a JavaScriptu.
+    </p>
+
+    <h2><br>Jak funguje JavaScript konvertor</h2>
+    <p>
+        JavaScript soubor zajišťuje veškerou logiku převodu měn. Níže je stručný popis toho, jak vše funguje:
+    </p>
+
+    <ol>
+        <li>
+            <strong>Kurzy měn:</strong> Na začátku je definovaný objekt <code>rates</code>, který obsahuje pevně nastavené kurzy mezi jednotlivými měnami. Například:
+            <pre><code>EUR: { USD: 1.1, CZK: 24.5, GBP: 0.88 }</code></pre>
+            To znamená, že 1 EUR = 1.1 USD, nebo 1 EUR = 24.5 CZK.
+        </li>
+
+        <li>
+            <strong>Zachycení kliknutí na tlačítko:</strong> Pomocí <code>.addEventListener</code> čeká na kliknutí na tlačítko „Převést“:
+            <pre><code>document.getElementById('convertBtn').addEventListener('click', () => { ... });</code></pre>
+        </li>
+
+        <li>
+            <strong>Načtení vstupních dat:</strong> Po kliknutí skript vezme hodnoty ze vstupních polí:
+            <ul>
+                <li><code>amount</code> – částka, kterou chce uživatel převést</li>
+                <li><code>from</code> – měna, ze které se převádí</li>
+                <li><code>to</code> – cílová měna</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Ověření vstupu:</strong> Skript kontroluje, jestli je částka číslo
+            a větší než nula. Pokud ne, vypíše chybu "Zadej platnou částku větší než 0.".
+        </li>
+
+        <li>
+            <strong>Samotný převod:</strong> Pokud jsou vstupy v pořádku a měny nejsou stejné, provede se výpočet:
+            <pre><code>const convertedAmount = amount * rates[from][to];</code></pre>
+            Výsledek se pak zobrazí ve formátu <br>
+            "Výsledek: 123.45 USD"
+        </li>
+
+        <li>
+            <strong>Výjimky:</strong> Pokud není dostupný kurz mezi dvěma měnami, skript ohlásí, že kurz není dostupný.
+        </li>
+    </ol>
+
+    <h2><br>Použité technologie</h2>
+    <ul>
+        <li><strong>HTML5</strong> – základní struktura stránky</li>
+        <li><strong>CSS3</strong> – stylování, včetně responzivního designu a efektů</li>
+        <li><strong>JavaScript</strong>Výpočty, zajištění chybových stavů atd.</li>
+    </ul>
+
+    <p>
+        Tento projekt mi pomohl lépe procvičit práci s událostmi v JavaScriptu, i stylování moderního webu.
+        Naučil jsem se pracovat s objekty, je to podobné jako pole v c.
+    </p>
+
+    <div ALIGN="center">
+        <img src="conv_code.png">
+    </div>
+</div>
+
+</body>
+</html>

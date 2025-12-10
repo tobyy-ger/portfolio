@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Konvertor měn</title>
+    <link rel="stylesheet" href="conv_style.css" />
+</head>
+<body>
+
+<div class="menu">
+    <a class="txt" href="index.php">Tobias Gerlich</a>
+    <nav>
+        <a class="menuOpt" href="conv_intro.html">Úvod</a>
+        <a class="menuOpt" href="convertor.html">Konvertor</a>
+        <a class="menuOpt" href="conv_about.html">O projektu</a>
+    </nav>
+</div>
+<form class="container">
+    <h1>Konvertor měn</h1>
+
+    <label for="amount">Částka:</label>
+    <input type="number" id="amount" placeholder="Zadej částku" />
+
+    <label for="fromCurrency">Z měny:</label>
+    <select id="fromCurrency">
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="CZK">CZK</option>
+        <option value="GBP">GBP</option>
+    </select>
+
+    <label for="toCurrency">Na měnu:</label>
+    <select id="toCurrency">
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="CZK">CZK</option>
+        <option value="GBP">GBP</option>
+    </select>
+
+    <button id="convertBtn" type="button">Převést</button>
+
+    <div id="result"></div>
+</form>
+
+<script src="conv_script.js"></script>
+</body>
+</html>
