@@ -16,6 +16,8 @@
     <a href="projects.php" class="btn">Podívat se na projekty</a>
 </header>
 
+<div id="cpystat" class="cpymail_div"><br></div>
+
 <div class="imglinks">
     <a href="https://github.com/tobyy-ger/" target="_blank">
         <img src="logogh.png" alt="GitHub" class="imglink">
@@ -23,10 +25,9 @@
     <a href="https://www.linkedin.com/in/tobias-gerlich-43419b353/" target="_blank">
         <img src="logolin.png" alt="LinkedIn" class="imglink">
     </a>
-    <a>
-        <img src="logomail.png" alt="e-mail" class="imglink" id="cpymail">
+    <a id="cpymail">
+        <img src="logomail.png" alt="e-mail" class="imglink">
     </a>
-    <a id="copystat"></a>
 </div>
 
 <?php include "footer.php"; ?>
