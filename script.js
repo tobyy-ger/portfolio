@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    //copy mail to clipboard
-    const email = "example@mail.com"; // ← sem vlož svůj e-mail
+    //cpy mail
+    const email = "tobiasger@seznam.com";
 
     const copyBtn = document.getElementById("cpymail");
     const statusDiv = document.getElementById("cpystat");
@@ -56,3 +56,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
